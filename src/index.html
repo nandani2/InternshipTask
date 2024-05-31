@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
+    <style>
+        .error {
+            color: red;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+    </style>
     <title>Document</title>
 </head>
 <body class="min-h-screen flex justify-center items-center bg-gray-200">
@@ -11,7 +18,7 @@
          <h1 class="text-2xl font-bold text-center text-blue-500 mb-10 ">
             Sign In
         </h1>
-        <form method="get">
+        <form id="loginForm">
             <div class="mb-6">
                 <input 
                     class="shadow appearance-none border rounded w-full py-2 px-4 text-black/60 text-lg font-semibold leading-tight focus:outline-blue-400 focus:shadow-outline"
@@ -27,12 +34,12 @@
 
             <div class="flex flex-wrap justify-center gap-4 md:justify-between items-center m-6">
                 <p class="text-sm font-medium text-center items-center text-gray-500">
-                        <a class="text-blue-500 hover:text-blue-700 " href="">
+                        <a class="text-blue-500 hover:text-blue-700 " href="./forgotusername.html">
                         Forgot Username
                     </a>
                 </p>
                 <p class="text-sm font-medium text-center text-gray-500">
-                        <a class="text-blue-500 hover:text-blue-700 " href="">
+                        <a class="text-blue-500 hover:text-blue-700 " href="./forgotpassword.html">
                         Forgot Password
                     </a>
                 </p>
@@ -41,6 +48,7 @@
             <div class="flex flex-wrap justify-center items-center">
                 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 mb-4 rounded-lg w-full focus:outline-none focus:shadow-outline" type="submit">
                     Sign In
+                    <a href="./signin.html"></a>
                 </button>
             </div>
 
@@ -55,11 +63,11 @@
             
             <div class="flex justify-center">
                 <p class="text-sm text-center text-gray-500">
-                    Don't have an account? <a class="text-blue-500  font-medium text-[16px] hover:text-blue-700" href="">Sign Up</a>
+                    Don't have an account? <a class="text-blue-500  font-medium text-[16px] hover:text-blue-700" href="./signup.html">Sign Up</a>
                 </p>
             </div>
         </form>
     </div>
-
+    <script src="./script.js"></script>
 </body>
 </html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Sign Up</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex justify-center items-center bg-gray-200">
+    <div class="w-full max-w-sm bg-white rounded-lg shadow-md p-10">
+        <h1 class="text-2xl font-bold text-center text-blue-500 mb-10">
+            Sign Up
+        </h1>
+        <form id="signupForm">
+            <div class="mb-6">
+                <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-4 text-black/60 text-lg font-semibold leading-tight focus:outline-blue-400 focus:shadow-outline"
+                    type="text" id="username" placeholder="Enter your username" required
+                >
+                <p id="usernameError" class="error hidden">Please enter a username.</p>
+            </div>
+            <div class="mb-6">
+                <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-4 text-black/60 text-lg font-semibold leading-tight focus:outline-blue-400 focus:shadow-outline"
+                    type="email" id="email" placeholder="Enter your email" required
+                >
+                <p id="emailError" class="error hidden">Please enter a valid email address.</p>
+            </div>
+            <div class="mb-6">
+                <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-4 text-black/60 text-lg font-semibold leading-tight focus:outline-blue-400 focus:shadow-outline"
+                    type="password" id="password" placeholder="Enter your password" required
+                >
+                <p id="passwordError" class="error hidden">Please enter a password.</p>
+            </div>
+            <div class="mb-8">
+                <input 
+                    class="shadow appearance-none border rounded w-full py-2 px-4 text-black/60 text-lg font-semibold leading-tight focus:outline-blue-400 focus:shadow-outline"
+                    type="password" id="confirmPassword" placeholder="Confirm your password" required
+                >
+                <p id="confirmPasswordError" class="error hidden">Passwords do not match.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center items-center">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-8 mb-4 rounded-lg w-full focus:outline-none focus:shadow-outline" type="submit">
+                    Sign Up
+                </button>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 sm:justify-between items-center mb-6">
+                <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-8 rounded-lg focus:outline-none focus:shadow-outline" type="reset">
+                    Reset
+                </button>
+                <button class="bg-gray-200 hover:bg-gray-400 text-black hover:text-black/40 font-bold py-2 px-8 rounded-lg focus:outline-none focus:shadow-outline" type="button" id="cancelButton">
+                    Cancel
+                </button>
+            </div>
+            
+            <div class="flex justify-center">
+                <p class="text-sm text-center text-gray-500">
+                    Already have an account? <a class="text-blue-500 font-medium text-[16px] hover:text-blue-700" href="./index.html">Sign In</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <script src="./signup.js"></script>
+</body>
+</html>
