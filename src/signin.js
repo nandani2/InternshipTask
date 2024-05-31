@@ -31,11 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
             passwordError.classList.add('hidden');
         }
 
-        if (!valid) {
-            alert(errorMessage);
+        if (valid) {
+            // Simulate successful login (in a real application, you'd verify credentials here)
+            sessionStorage.setItem('isLoggedIn', 'true');
+            window.location.href = 'welcome.html'; // Redirect to welcome page
         } else {
-            alert('Form submitted successfully!');
-            form.submit();  // Replace with AJAX request if needed
+            alert(errorMessage);
         }
     });
 
